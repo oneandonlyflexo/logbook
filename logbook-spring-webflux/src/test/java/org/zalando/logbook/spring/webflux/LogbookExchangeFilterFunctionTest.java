@@ -3,8 +3,8 @@ package org.zalando.logbook.spring.webflux;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.zalando.logbook.*;
 
@@ -19,7 +19,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @SpringBootTest(classes = TestApplication.class, webEnvironment = RANDOM_PORT)
 class LogbookExchangeFilterFunctionTest {
 
-    @LocalServerPort
+    @Value("${local.server.port}")
     int port;
 
     private final HttpLogWriter writer = mock(HttpLogWriter.class);

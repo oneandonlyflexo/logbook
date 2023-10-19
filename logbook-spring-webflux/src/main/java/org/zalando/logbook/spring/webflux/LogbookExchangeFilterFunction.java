@@ -46,7 +46,8 @@ public class LogbookExchangeFilterFunction implements ExchangeFilterFunction {
                                     return it
                                             .bodyToMono(byte[].class)
                                             .doOnNext(clientResponse::buffer)
-                                            .map(b -> response.mutate().body(Flux.just(DefaultDataBufferFactory.sharedInstance.wrap(b))).build());
+                                            .map(b -> org.springframework.web.reactive.function.client.ClientResponse.from(response)
+                                                .body(Flux.just(DataBufferCopyUtils.sharedInstance.wrap(b))).build());
                                 } else {
                                     return Mono.just(it);
                                 }
