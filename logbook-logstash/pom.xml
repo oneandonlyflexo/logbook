@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.zalando</groupId>
+        <groupId>com.lanturnalis</groupId>
         <artifactId>logbook-parent</artifactId>
-        <version>2.15.0</version>
+        <version>2.15.1</version>
         <relativePath>../logbook-parent/pom.xml</relativePath>
     </parent>
     <artifactId>logbook-logstash</artifactId>
@@ -16,13 +16,13 @@
     </scm>
     <dependencies>
         <dependency>
-            <groupId>org.zalando</groupId>
+            <groupId>com.lanturnalis</groupId>
             <artifactId>logbook-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.zalando</groupId>
+            <groupId>com.lanturnalis</groupId>
             <artifactId>logbook-json</artifactId>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
@@ -33,12 +33,12 @@
             <version>1.2.10</version>
         </dependency>
         <dependency>
-            <groupId>org.zalando</groupId>
+            <groupId>com.lanturnalis</groupId>
             <artifactId>logbook-test</artifactId>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
         <dependency>
-            <groupId>org.zalando</groupId>
+            <groupId>com.lanturnalis</groupId>
             <artifactId>logbook-core</artifactId>
             <scope>test</scope>
         </dependency>
